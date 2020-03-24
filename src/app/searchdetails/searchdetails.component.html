@@ -1,0 +1,11 @@
+<div class="details-search">
+<h4>Erro em {{errors.environment}} -  {{errors.createdDate | date:  "dd/MM/y"}}</h4>
+<div class="card">
+    <h5 class="card-header">Evento: {{errors.event}}</h5>
+    <div class="card-body">
+      <h5 class="card-title">Nivel: {{errors.level}}</h5>
+      <p class="card-text">Detalhes: {{errors.detailsLog}}</p>
+      <a [routerLink]="['/']" class="btn btn-primary">Voltar</a>
+    </div>
+  </div>
+</div>

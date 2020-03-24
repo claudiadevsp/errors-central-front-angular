@@ -1,0 +1,16 @@
+﻿<!-- nav -->
+<nav class="navbar navbar-expand navbar-light bg-light" *ngIf="currentUser">
+   <div class="welcome">
+    <h5>Central de Erros</h5>
+  </div>
+    <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+        <ul class="navbar-nav ml-auto">
+          <a class="nav-link" (click)="logout()" title="Sair"><img src="../assets/exit.png" alt="Sair"></a>
+        </ul>
+    </div>
+</nav>
+<div>
+    <alert></alert>
+    <router-outlet></router-outlet>
+</div>
+

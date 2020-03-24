@@ -1,0 +1,29 @@
+﻿<div class="container">
+  <div id="login" class="signin-card">
+      <div class="logo-image">
+       <img src="../assets/guiabolso.png" alt="Logo" title="Logo" width="138">
+      </div>
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <div id="form-login-username" class="form-group">        
+        <input type="email" class="form-control" formControlName="email" [ngClass]="{ 'is-invalid': submitted && filter.email.errors }"  placeholder="Digite o e-mail"/>
+        <div *ngIf="submitted && filter.email.errors" class="invalid-feedback">
+          <div *ngIf="filter.email.errors.required">E-mail é obrigatório</div>
+        </div>
+        <span class="form-highlight"></span>
+        <span class="form-bar"></span>
+      </div>
+      <div id="form-login-password" class="form-group">        
+        <input type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && filter.password.errors }" />
+          <div *ngIf="submitted && filter.password.errors" class="invalid-feedback">
+              <div *ngIf="filter.password.errors.required">Senha é obrigatório</div>
+          </div>
+        <span class="form-highlight"></span>
+        <span class="form-bar"></span>
+      </div>
+      <div class="form-group btn-login">      
+        <button [disabled]="loading" class="btn btn-info">Login</button>
+        <a routerLink="/register" class="btn btn-link">Cadastre-se</a>
+      </div>
+    </form>
+  </div>
+  </div>
