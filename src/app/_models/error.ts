@@ -1,7 +1,9 @@
 export class Error {
   id: number;
+  environment: string;
   userId: number;
   event: string;
   level: string;
-  created_date: Date;
+  detailsLog: string;
+  createdDate: Date;
 }
