@@ -12,7 +12,7 @@ import { Error, User } from '@app/_models';
 })
 export class SearchdetailsComponent implements OnInit , OnDestroy {
 
-  errorsModel: Error[] = [];
+  errors: Error[] = [];
   searchForm: FormGroup;
   currentUserSubscription: Subscription;
   currentUser: User;
@@ -37,7 +37,7 @@ export class SearchdetailsComponent implements OnInit , OnDestroy {
 
   detailsLog(id: number){
     this.errorService.detailsError(id).pipe(first()).subscribe(errors => {
-      this.errorsModel = errors;             
+      this.errors = errors;                   
     });
   }
 
