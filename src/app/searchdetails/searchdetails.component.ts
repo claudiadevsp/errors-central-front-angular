@@ -37,8 +37,7 @@ export class SearchdetailsComponent implements OnInit , OnDestroy {
 
   detailsLog(id: number){
     this.errorService.detailsError(id).pipe(first()).subscribe(errors => {
-      this.errorsModel = errors;
-      console.log(this.errorsModel);       
+      this.errorsModel = errors;             
     });
   }
 
