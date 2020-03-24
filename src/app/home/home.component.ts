@@ -51,7 +51,8 @@ export class HomeComponent implements OnInit, OnDestroy {
     
     private loadAllErrors(env: string, level: string, event: string, details: string) {
         this.errorService.findAll(env, level, event, details).pipe(first()).subscribe(errors => {
-            this.errors = errors;                
+            this.errors = errors;
+            console.log(this.errors); 
         });
     }
 

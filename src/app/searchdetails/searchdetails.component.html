@@ -1,10 +1,10 @@
-<div class="details-search" *ngFor="let error of errors">
-<h4>Erro em {{error.environment}} -  {{error.createdDate | date:  "dd/MM/y"}}</h4>
+<div class="details-search">   
+ <h4>Erro em {{itemError[4]}} -  {{itemError[5] | date:  "dd/MM/y"}}</h4>
 <div class="card">
-    <h5 class="card-header">Evento: {{error.event}}</h5>
+    <h5 class="card-header">Evento: {{itemError[3]}}</h5>
     <div class="card-body">
-      <h5 class="card-title">Nivel: {{error.level}}</h5>
-      <p class="card-text">Detalhes: {{error.detailsLog}}</p>
+      <h5 class="card-title">Nivel: {{itemError[2]}}</h5>
+      <p class="card-text">Detalhes: {{itemError[6]}}</p>
       <a [routerLink]="['/']" class="btn btn-primary">Voltar</a>
     </div>
   </div>

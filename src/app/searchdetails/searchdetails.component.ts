@@ -16,6 +16,8 @@ export class SearchdetailsComponent implements OnInit , OnDestroy {
   searchForm: FormGroup;
   currentUserSubscription: Subscription;
   currentUser: User;
+  itemError: Error[] = [];
+  
 
   constructor(
       private route: ActivatedRoute, 
@@ -37,8 +39,11 @@ export class SearchdetailsComponent implements OnInit , OnDestroy {
 
   detailsLog(id: number){
     this.errorService.detailsError(id).pipe(first()).subscribe(errors => {
-      this.errors = errors;                   
+      this.errors = errors;
+      this.itemError = Object.values(this.errors);
+      console.log(this.itemError);
     });
+    
   }
 
   ngOnDestroy() {
