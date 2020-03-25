@@ -48,8 +48,11 @@ export class RegisterComponent implements OnInit {
                     this.alertService.success('Cadastro efetuado com sucesso!!', true);
                     this.router.navigate(['/login']);
                 },
-                error => {
-                    this.alertService.error(error);
+                error => {                    
+                    if (error.status === 500) {
+                        error.message = 'Não é possivel efetuar o cadastro';
+                    }
+                    this.alertService.error(error.message);
                     this.loading = false;
                 });
     }
