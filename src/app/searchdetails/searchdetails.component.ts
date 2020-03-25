@@ -17,7 +17,7 @@ export class SearchdetailsComponent implements OnInit , OnDestroy {
   currentUserSubscription: Subscription;
   currentUser: User;
   itemError: Error[] = [];
-  
+  email: User[] = [];
 
   constructor(
       private route: ActivatedRoute, 
@@ -41,7 +41,7 @@ export class SearchdetailsComponent implements OnInit , OnDestroy {
     this.errorService.detailsError(id).pipe(first()).subscribe(errors => {
       this.errors = errors;
       this.itemError = Object.values(this.errors);
-      console.log(this.itemError);
+      this.email = Object.values(this.itemError[1]);        
     });
     
   }
