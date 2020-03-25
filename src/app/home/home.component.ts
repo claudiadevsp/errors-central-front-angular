@@ -60,6 +60,8 @@ export class HomeComponent implements OnInit, OnDestroy {
         title: 'Tem certeza que deseja arquivar?',
         icon: 'warning',
         showCancelButton: true,
+        confirmButtonColor: "#0C8599",
+        cancelButtonColor: "#DD6B55",
         confirmButtonText: 'SIM',
         cancelButtonText: 'NÃO'
       }).then((result) => {
