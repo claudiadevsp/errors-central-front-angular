@@ -3,22 +3,22 @@
       <div class="form-group mb-12">
         <select class="form-control form-control-md" id="environment" formControlName="environment" >
           <option value="">Ambiente</option>
-          <option value="Produção">Produção</option>
-          <option value="Homologação">Homologação</option>
-          <option value="Desenvolvimento">Desenvolvimento</option>
+          <option value="prod">Produção</option>
+          <option value="homol">Homologação</option>
+          <option value="des">Desenvolvimento</option>
         </select>
         <select class="form-control form-control-md" id="level" formControlName="level">
           <option value="">Nivel</option>
-          <option value="Warning">Warning</option>
-          <option value="Error">Error</option>
-          <option value="Info">Info</option>
+          <option value="warning">Warning</option>
+          <option value="error">Error</option>
+          <option value="info">Info</option>
         </select>
         <select class="form-control form-control-md" id="event" formControlName="event">
           <option value="">Evento</option>
-          <option value="Create">Create</option>
-          <option value="Update">Update</option>
-          <option value="Read">Read</option>
-          <option value="Delete">Delete</option>
+          <option value="create">Create</option>
+          <option value="update">Update</option>
+          <option value="read">Read</option>
+          <option value="delete">Delete</option>
         </select>
         <input type="text" title= "Ao digitar um termo os filtros são ignorados" class="form-control form-control-md" id="details" placeholder="Digite um termo de busca" formControlName="details">
         <button type="button" class="btn btn-info"  (click)="onSubmit()">Pesquisar</button>
